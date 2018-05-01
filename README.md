@@ -33,7 +33,7 @@ $ttl = 43200; // 12 hours in seconds
 $channel = new Channel(
     $title, $link, $author, $email,
     $image, $explicit, $categories,
-    $description, $lang, $copyright, $title
+    $description, $lang, $copyright, $ttl
 );
 
 // SETUP EPISODE
