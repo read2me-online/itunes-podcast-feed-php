@@ -1,0 +1,23 @@
+<title>Read2Me Daily Curated Articles</title>
+<link>https://read2me.online</link>
+
+        <!-- iTunes-specific metadata -->
+<itunes:author>NYTimes and Medium</itunes:author>
+<itunes:owner>
+    <itunes:name>NYTimes and Medium</itunes:name>
+    <itunes:email>hello@read2me.online</itunes:email>
+</itunes:owner>
+
+<itunes:image href="https://d22fip447qchhd.cloudfront.net/api/widget/static/images/default-thumbnail.png" />
+<itunes:explicit>no</itunes:explicit>
+<itunes:category text="News"/>
+<itunes:category text="Technology"/>
+<itunes:category text="Culture"/>
+<itunes:category text="Entrepreneurship"/>
+<itunes:category text="Productivity"/>
+
+<itunes:summary>Daily curated articles from New York Times and Medium</itunes:summary>
+
+<language>en</language>
+<copyright>The New York Times Company and The Medium Company</copyright>
+<ttl>43200</ttl>

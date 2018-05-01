@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 class ChannelTest extends TestCase
 {
     private const Title = 'Read2Me Daily Curated Articles';
-    private const Link = 'https://read2me.online/';
+    private const Link = 'https://read2me.online';
     private const Author = 'NYTimes and Medium';
     private const Email = 'hello@read2me.online';
     private const Image = 'https://d22fip447qchhd.cloudfront.net/api/widget/static/images/default-thumbnail.png';
@@ -41,32 +41,9 @@ class ChannelTest extends TestCase
 
     public function testChannel(): void {
         $channel = static::getChannel();
-        $expected = <<<XML
-<title>$this->title</title>
-<link>$this->link</link>
+        $expected = file_get_contents(__DIR__ . '/fixtures/channel.xml');
+        $actual = $channel->getXml();
 
-        <!-- iTunes-specific metadata -->
-<itunes:author>$this->author</itunes:author>
-<itunes:owner>
-    <itunes:name>$this->author</itunes:name>
-    <itunes:email>$this->email</itunes:email>
-</itunes:owner>
-
-<itunes:image href="$this->image" />
-<itunes:explicit>no</itunes:explicit>
-<itunes:category text="News"/>
-<itunes:category text="Technology"/>
-<itunes:category text="Culture"/>
-<itunes:category text="Entrepreneurship"/>
-<itunes:category text="Productivity"/>
-
-<itunes:summary>$this->description</itunes:summary>
-
-<language>$this->lang</language>
-<copyright>$this->copyright</copyright>
-<ttl>$this->ttl</ttl>
-XML;
-
-        $this->assertEquals($expected, $channel->getXml());
+        $this->assertEquals($expected, $actual, sprintf("##ACTUAL##\n\n%s\n\n##ENDS ACTUAL##\n", $actual));
     }
 }

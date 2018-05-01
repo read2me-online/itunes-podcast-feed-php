@@ -81,11 +81,11 @@ class Channel implements ChannelInterface
     {
         $template = file_get_contents(__DIR__ . '/templates/channel.xml');
 
-        foreach (get_object_vars($this) as $propName) {
+        foreach (get_object_vars($this) as $propName => $propValue) {
             if ($propName == 'categories') {
                 $template = str_replace('{{categories}}', $this->getCategories(), $template);
             } else {
-                $template = str_replace(sprintf('{{%s}}', $propName), $this->$propName, $template);
+                $template = str_replace(sprintf('{{%s}}', $propName), $propValue, $template);
             }
         }
 
