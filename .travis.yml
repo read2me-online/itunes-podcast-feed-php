@@ -6,6 +6,7 @@ php:
   - nightly
 
 matrix:
-  allow_failures:
-    - php: hhvm, nightly
+    allow_failures:
+      - php: hhvm
+      - php: nightly
 script: "composer install && phpunit tests"
