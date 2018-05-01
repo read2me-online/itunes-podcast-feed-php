@@ -1,0 +1,23 @@
+<title>{{title}}</title>
+<link>{{link}}</link>
+
+        <!-- iTunes-specific metadata -->
+<itunes:author>{{author}}</itunes:author>
+<itunes:owner>
+    <itunes:name>{{author}}</itunes:name>
+    <itunes:email>{{email}}</itunes:email>
+</itunes:owner>
+
+<itunes:image href="{{image}}" />
+<itunes:explicit>{{explicit}}</itunes:explicit>
+{{categories}}
+
+<itunes:summary>{{description}}</itunes:summary>
+
+<!-- Non-iTunes metadata -->
+<category>{{category}}</category>
+<description>{{description}}</description>
+
+<language>{{lang}}</language>
+<copyright>{{copyright}}</copyright>
+<ttl>{{ttl}}</ttl>

@@ -6,10 +6,9 @@
  * Time: 19:31
  */
 declare(strict_types=1);
-namespace iTunesPodcastFeed;
+namespace iTunesPodcastFeed\Interfaces;
 
-
-interface FeedConfig
+interface Channel extends Xml
 {
     public function __construct(
         string $title, string $link, string $author, string $email, string $image, bool $isExplicit,

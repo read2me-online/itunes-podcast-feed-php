@@ -6,10 +6,10 @@
  * Time: 19:32
  */
 declare(strict_types=1);
-namespace iTunesPodcastFeed;
+namespace iTunesPodcastFeed\Interfaces;
 
 
-interface Episode
+interface Item extends Xml
 {
     public function __construct(
         string $title, string $url, int $duration, string $description,
