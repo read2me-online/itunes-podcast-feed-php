@@ -1,0 +1,12 @@
+<item>
+    <title>{{title}}</title>
+    <link>{{fileUrl}}</link>
+
+    <duration>{{duration}}</duration>
+
+    <description>{{description}}</description>
+    <pubDate>{{publishDate}}</pubDate>
+
+    <enclosure url="{{fileUrl}}" length="{{fileSizeBytes}}" type="{{mime}}" />
+    <guid>{{fileUrl}}</guid>
+</item>

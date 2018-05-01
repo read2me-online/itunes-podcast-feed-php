@@ -9,9 +9,12 @@ declare(strict_types=1);
 namespace iTunesPodcastFeed;
 
 use iTunesPodcastFeed\Interfaces\Channel as ChannelInterface;
+use iTunesPodcastFeed\Traits\RssEscape;
 
 class Channel implements ChannelInterface
 {
+    use RssEscape;
+
     /**
      * @var string
      */
@@ -61,14 +64,14 @@ class Channel implements ChannelInterface
         string $title, string $link, string $author, string $email, string $image, bool $explicit,
         iterable $categories, string $description, string $lang, string $copyright, int $ttl
     ) {
-        $this->title = $title;
+        $this->title = $this->escape($title);
         $this->link = $link;
         $this->author = $author;
         $this->email = $email;
         $this->image = $image;
         $this->explicit = $explicit ? 'yes' : 'no';
         $this->categories = $categories;
-        $this->description = $description;
+        $this->description = $this->escape($description);
         $this->lang = $lang;
         $this->copyright = $copyright;
         $this->ttl = $ttl;
