@@ -1,4 +1,9 @@
 {
+  "name": "https://github.com/read2me-online/itunes-podcast-feed-php",
+  "type": "library",
+  "description": "A tiny PHP library for generating iTunes-compatible podcast feeds. ",
+  "keywords": ["itunes","podcast feed", "rss"],
+
   "require": {
     "php": ">=7.1"
   },
