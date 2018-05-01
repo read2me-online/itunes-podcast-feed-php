@@ -1,10 +1,11 @@
-[![Build Status](https://travis-ci.org/read2me-online/itunes-podcast-feed-php.svg?branch=master)](https://travis-ci.org/read2me-online/itunes-podcast-feed-php)
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ninoskopac
+ * Date: 01/05/2018
+ * Time: 22:10
+ */
 
-# Installation
-`composer require read2me-online/itunes-podcast-feed-php`
-
-# Usage
-```php
 use iTunesPodcastFeed\Channel;
 use iTunesPodcastFeed\FeedGenerator;
 use iTunesPodcastFeed\Item;
@@ -54,8 +55,3 @@ $item2 = clone $item; // just to give you an idea of how it works
 $feed = new FeedGenerator($channel, ...[$item, $item2]);
 
 print $feed->getXml();
-```
-
-# Acknowledgments
-XML syntax based off [aaronsnoswell/itunes-podcast-feed
-](https://github.com/aaronsnoswell/itunes-podcast-feed)
