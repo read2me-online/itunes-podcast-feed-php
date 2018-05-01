@@ -44,6 +44,8 @@ class Item implements ItemInterface
      */
     private $mime;
 
+    private static $template;
+
     public function __construct(
         string $title, string $fileUrl, string $duration,
         string $description, int $publishDate, int $fileSizeBytes, string $mime
@@ -55,10 +57,13 @@ class Item implements ItemInterface
         $this->publishDate = date('r', $publishDate);
         $this->fileSizeBytes = $fileSizeBytes;
         $this->mime = $mime;
+
+        if (empty(self::$template)) // avoid disk IO for every item instance
+            self::$template = file_get_contents(__DIR__ . '/templates/item.xml');
     }
 
     public function getXml(): string {
-        $template = file_get_contents(__DIR__ . '/templates/item.xml');
+        $template = self::$template;
 
         foreach (get_object_vars($this) as $propName => $propValue) {
             $template = str_replace(sprintf('{{%s}}', $propName), $propValue, $template);

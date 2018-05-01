@@ -21,18 +21,18 @@ class FeedGenerator implements FeedGeneratorInterface
     /**
      * @var Item[]
      */
-    private $episodes;
+    private $items;
 
     /**
      * FeedGenerator constructor.
      *
      * @param Channel $config
-     * @param Item[] $episodes
+     * @param Item[] $items
      */
-    public function __construct(Channel $config, Item ...$episodes)
+    public function __construct(Channel $config, Item ...$items)
     {
         $this->config = $config;
-        $this->episodes = $episodes;
+        $this->items = $items;
     }
 
     /**
@@ -40,6 +40,16 @@ class FeedGenerator implements FeedGeneratorInterface
      */
     public function getXml(): string
     {
-        // TODO: Implement getXml() method.
+        $template = file_get_contents(__DIR__ . '/templates/feed.xml');
+        $template = str_replace('{{channelMeta}}', $this->config->getXml(), $template);
+        $itemsXml = '';
+
+        foreach ($this->items as $item) {
+            $itemsXml .= $item->getXml() . "\n";
+        }
+
+        $template = str_replace('{{items}}', $itemsXml, $template);
+
+        return $template;
     }
 }
