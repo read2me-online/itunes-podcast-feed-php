@@ -11,5 +11,8 @@ namespace iTunesPodcastFeed;
 
 interface FeedConfig
 {
-
+    public function __construct(
+        string $title, string $link, string $author, string $email, string $image, bool $isExplicit,
+        string $category, string $subCategory, string $description, string $lang, string $copyright, int $ttl
+    );
 }

@@ -11,5 +11,8 @@ namespace iTunesPodcastFeed;
 
 interface Episode
 {
-
+    public function __construct(
+        string $title, string $url, int $duration, string $description,
+        int $date, int $fileSizeBytes, string $mime
+    );
 }

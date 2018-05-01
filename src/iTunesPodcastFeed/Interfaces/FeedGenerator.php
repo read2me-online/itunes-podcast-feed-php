@@ -8,7 +8,14 @@
 declare(strict_types=1);
 namespace iTunesPodcastFeed;
 
+
 interface FeedGenerator
 {
-
+    /**
+     * FeedGenerator constructor.
+     *
+     * @param FeedConfig $config
+     * @param Episode[] $episodes
+     */
+    public function __construct(FeedConfig $config, Episode ...$episodes);
 }
