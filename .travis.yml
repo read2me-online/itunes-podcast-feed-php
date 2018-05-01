@@ -7,4 +7,4 @@ php:
 matrix:
   allow_failures:
     - php: nightly
-script: "./vendor/bin/phpunit tests"
+script: "composer install && phpunit tests"
