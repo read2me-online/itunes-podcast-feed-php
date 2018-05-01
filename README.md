@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/read2me-online/itunes-podcast-feed-php.svg?branch=master)](https://travis-ci.org/read2me-online/itunes-podcast-feed-php)
 
 # Installation
-TODO
+`composer require read2me-online/itunes-podcast-feed-php`
 
 # Usage
 
