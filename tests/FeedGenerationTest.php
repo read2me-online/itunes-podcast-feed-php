@@ -18,6 +18,9 @@ class FeedGenerationTest extends TestCase
         $items = [ItemTest::getItem(), ItemTest::getItem()]; // multiple identical items just for the sake of testing
         $feed = new FeedGenerator($channel, ...$items);
 
-        $this->assertNotEmpty($feed->getXml());
+        $expected = file_get_contents(__DIR__ . '/fixtures/feed.xml');
+        $actual = $feed->getXml();
+
+        $this->assertEquals($expected, $actual);
     }
 }
