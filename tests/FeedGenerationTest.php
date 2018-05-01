@@ -9,7 +9,11 @@ declare(strict_types=1);
 namespace iTunesPodcastFeed\Tests;
 
 
-class FeedGenerationTest
-{
+use PHPUnit\Framework\TestCase;
 
+class FeedGenerationTest extends TestCase
+{
+    public function testGenerator(): void {
+        //$channel = new
+    }
 }

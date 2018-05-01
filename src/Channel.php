@@ -96,7 +96,7 @@ class Channel implements ChannelInterface
         $categories = [];
 
         foreach ($this->categories as $category) {
-            $categories[] = sprintf('<itunes:category text="%s"/>', $category);
+            $categories[] = sprintf('<itunes:category text="%s"/>', htmlspecialchars($category));
         }
 
         return implode("\n", $categories);
