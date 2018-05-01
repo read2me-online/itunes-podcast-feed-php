@@ -1,0 +1,10 @@
+language: php
+php:
+  - 7.1
+  - hhvm
+  - nightly
+
+matrix:
+  allow_failures:
+    - php: nightly
+script: "./vendor/bin/phpunit tests"
