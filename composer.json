@@ -1,0 +1,21 @@
+{
+  "require": {
+    "php": ">=7.1"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "iTunesPodcastFeed\\": "src/iTunesPodcastFeed/"
+    }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "iTunesPodcastFeed\\Tests\\": "tests/"
+    }
+  },
+
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  }
+}
