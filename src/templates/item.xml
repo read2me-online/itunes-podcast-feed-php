@@ -3,6 +3,7 @@
     <link>{{fileUrl}}</link>
 
     <duration>{{duration}}</duration>
+    <itunes:duration>{{duration}}</itunes:duration>
 
     <description>{{description}}</description>
     <pubDate>{{publishDate}}</pubDate>
