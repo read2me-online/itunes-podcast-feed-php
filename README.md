@@ -6,6 +6,8 @@
 `composer require read2me-online/itunes-podcast-feed-php`
 
 # Usage
+Put this in a file that you want to become your feed (e.g. `https://mysite.com/rss/feed.php`):
+
 ```php
 use iTunesPodcastFeed\Channel;
 use iTunesPodcastFeed\FeedGenerator;
@@ -61,6 +63,8 @@ header('Content-Type: application/xml; charset=utf-8');
 
 print $feed->getXml();
 ```
+
+Then, go to https://podcastsconnect.apple.com/my-podcasts/new-feed and submit your feed.
 
 # Acknowledgments
 XML syntax based off [aaronsnoswell/itunes-podcast-feed
