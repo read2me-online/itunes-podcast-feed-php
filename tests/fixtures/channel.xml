@@ -8,7 +8,7 @@
     <itunes:email>hello@read2me.online</itunes:email>
 </itunes:owner>
 
-<itunes:image href="https://d22fip447qchhd.cloudfront.net/api/widget/static/images/default-thumbnail.png" />
+<itunes:image href="https://d22fip447qchhd.cloudfront.net/api/widget/static/images/android-chrome-1400x1400.png" />
 <itunes:explicit>no</itunes:explicit>
 <itunes:category text="News"/>
 <itunes:category text="Technology"/>

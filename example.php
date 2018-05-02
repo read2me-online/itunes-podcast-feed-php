@@ -17,7 +17,7 @@ $title = 'Read2Me Daily Curated Articles';
 $link = 'https://read2me.online';
 $author = 'NYTimes and Medium';
 $email = 'hello@read2me.online';
-$image = 'https://d22fip447qchhd.cloudfront.net/api/widget/static/images/default-thumbnail.png';
+$image = 'https://d22fip447qchhd.cloudfront.net/api/widget/static/images/android-chrome-1400x1400.png';
 $explicit = false;
 $categories = [
     'News',

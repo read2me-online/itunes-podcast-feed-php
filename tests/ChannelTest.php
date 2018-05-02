@@ -17,7 +17,7 @@ class ChannelTest extends TestCase
     private const Link = 'https://read2me.online';
     private const Author = 'NYTimes and Medium';
     private const Email = 'hello@read2me.online';
-    private const Image = 'https://d22fip447qchhd.cloudfront.net/api/widget/static/images/default-thumbnail.png';
+    private const Image = 'https://d22fip447qchhd.cloudfront.net/api/widget/static/images/android-chrome-1400x1400.png';
     private const Explicit = false;
     private const Categories = [
         'News',
