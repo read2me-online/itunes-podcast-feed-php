@@ -8,28 +8,28 @@
 declare(strict_types=1);
 namespace iTunesPodcastFeed;
 
-use iTunesPodcastFeed\Interfaces\Channel;
+use iTunesPodcastFeed\Interfaces\Channel as ChannelInterface;
 use iTunesPodcastFeed\Interfaces\FeedGenerator as FeedGeneratorInterface;
-use iTunesPodcastFeed\Interfaces\Item;
+use iTunesPodcastFeed\Interfaces\Item as ItemInterface;
 
 class FeedGenerator implements FeedGeneratorInterface
 {
     /**
-     * @var Channel
+     * @var ChannelInterface
      */
     private $config;
     /**
-     * @var Item[]
+     * @var ItemInterface[]
      */
     private $items;
 
     /**
      * FeedGenerator constructor.
      *
-     * @param Channel $config
-     * @param Item[] $items
+     * @param ChannelInterface $config
+     * @param ItemInterface[] $items
      */
-    public function __construct(Channel $config, Item ...$items)
+    public function __construct(ChannelInterface $config, ItemInterface ...$items)
     {
         $this->config = $config;
         $this->items = $items;
