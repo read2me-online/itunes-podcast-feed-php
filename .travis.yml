@@ -1,6 +1,5 @@
 language: php
 php:
-  - 7.0
   - 7.1
   - 7.2
   - hhvm
@@ -10,4 +9,4 @@ matrix:
     allow_failures:
       - php: hhvm
       - php: nightly
-script: "composer update && phpunit tests && php example.php"
+script: "composer install && phpunit tests && php example.php"
