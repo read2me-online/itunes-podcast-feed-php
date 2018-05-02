@@ -10,4 +10,4 @@ matrix:
     allow_failures:
       - php: hhvm
       - php: nightly
-script: "composer install && phpunit tests && php example.php"
+script: "composer update && phpunit tests && php example.php"
