@@ -66,6 +66,8 @@ print $feed->getXml();
 
 Then, go to https://podcastsconnect.apple.com/my-podcasts/new-feed and submit your feed.
 
-# Acknowledgments
-XML syntax based off [aaronsnoswell/itunes-podcast-feed
+# Addendum
+- XML syntax based off [aaronsnoswell/itunes-podcast-feed
 ](https://github.com/aaronsnoswell/itunes-podcast-feed)
+- Donate: https://paypal.me/skopac
+- This library is in production use at [Read2Me](https://read2me.online/)
