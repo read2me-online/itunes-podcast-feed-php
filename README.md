@@ -69,5 +69,7 @@ Then, go to https://podcastsconnect.apple.com/my-podcasts/new-feed and submit yo
 # Addendum
 - XML syntax based off [aaronsnoswell/itunes-podcast-feed
 ](https://github.com/aaronsnoswell/itunes-podcast-feed)
-- Donate: https://paypal.me/skopac
 - This library is in production use at [Read2Me](https://read2me.online/)
+- Demo: https://read2me.online/rss/daily-curated-articles.php
+- iTunes link for the aforementioned demo: https://itunes.apple.com/hr/podcast/read2me-daily-curated-articles/id1378984368
+- Donate: https://paypal.me/skopac
