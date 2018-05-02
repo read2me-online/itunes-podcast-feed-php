@@ -24,7 +24,7 @@ class Item implements ItemInterface
      */
     private $fileUrl;
     /**
-     * @var int
+     * @var string
      */
     private $duration;
     /**
@@ -32,7 +32,7 @@ class Item implements ItemInterface
      */
     private $description;
     /**
-     * @var int
+     * @var string
      */
     private $publishDate;
     /**
