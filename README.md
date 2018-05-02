@@ -56,6 +56,8 @@ $item2 = clone $item; // just to give you an idea of how it works
 $feed = new FeedGenerator($channel, ...[$item, $item2]);
 
 // OUTPUT XML
+header('Content-Type: application/xml; charset=utf-8');
+
 print $feed->getXml();
 ```
 
