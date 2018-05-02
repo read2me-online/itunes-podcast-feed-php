@@ -36,7 +36,7 @@ class Channel implements ChannelInterface
      */
     private $image;
     /**
-     * @var bool
+     * @var string
      */
     private $explicit;
     /**
