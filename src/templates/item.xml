@@ -1,6 +1,5 @@
 <item>
     <title>{{title}}</title>
-    <link>{{fileUrl}}</link>
 
     <duration>{{duration}}</duration>
     <itunes:duration>{{duration}}</itunes:duration>
