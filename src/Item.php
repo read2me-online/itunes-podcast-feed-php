@@ -43,12 +43,17 @@ class Item implements ItemInterface
      * @var string
      */
     private $mime;
+    /**
+     * @var null|string
+     */
+    private $guid;
 
     private static $template;
 
     public function __construct(
         string $title, string $fileUrl, string $duration,
-        string $description, int $publishDate, int $fileSizeBytes, string $mime
+        string $description, int $publishDate, int $fileSizeBytes,
+        string $mime, ?string $guid = null
     ) {
         $this->title = $this->escape($title);
         $this->fileUrl = $fileUrl;
@@ -57,6 +62,7 @@ class Item implements ItemInterface
         $this->publishDate = date('r', $publishDate);
         $this->fileSizeBytes = $fileSizeBytes;
         $this->mime = $mime;
+        $this->guid = $guid ?: $this->fileUrl;
 
         if (empty(self::$template)) // avoid disk IO for every item instance
             self::$template = file_get_contents(__DIR__ . '/templates/item.xml');

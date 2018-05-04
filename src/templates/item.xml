@@ -9,5 +9,5 @@
     <pubDate>{{publishDate}}</pubDate>
 
     <enclosure url="{{fileUrl}}" length="{{fileSizeBytes}}" type="{{mime}}" />
-    <guid>{{fileUrl}}</guid>
+    <guid>{{guid}}</guid>
 </item>
