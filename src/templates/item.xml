@@ -10,4 +10,5 @@
 
     <enclosure url="{{fileUrl}}" length="{{fileSizeBytes}}" type="{{mime}}" />
     <guid>{{guid}}</guid>
+    <link>{{link}}</link>
 </item>

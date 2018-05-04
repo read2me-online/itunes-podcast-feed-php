@@ -21,11 +21,11 @@ class ItemTest extends TestCase
     private const Filesize = 828387;
     private const Mime = 'audio/mpeg';
 
-    public static function getItem(?string $guid = null): Item {
+    public static function getItem(?string $guid = null, ?string $link = null): Item {
         return new Item(
             self::Title, self::File_Url, self::Duration,
             self::Description, self::Date, self::Filesize,
-            self::Mime, $guid
+            self::Mime, $guid, $link
         );
     }
 
@@ -40,6 +40,14 @@ class ItemTest extends TestCase
     public function testCustomGuid(): void {
         $item = static::getItem('foobar');
         $expected = file_get_contents(__DIR__ . '/fixtures/item-custom-guid.xml');
+        $actual = $item->getXml();
+
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testCustomLink(): void {
+        $item = static::getItem(null, 'https://mysite.com/podcast/episodes/123');
+        $expected = file_get_contents(__DIR__ . '/fixtures/item-custom-link.xml');
         $actual = $item->getXml();
 
         $this->assertEquals($expected, $actual);
