@@ -77,7 +77,7 @@ class Item implements ItemInterface
         $template = self::$template;
 
         foreach (get_object_vars($this) as $propName => $propValue) {
-            $template = str_replace(sprintf('{{%s}}', $propName), $propValue, $template);
+            $template = str_replace(sprintf('{{%s}}', $propName), (string)$propValue, $template);
         }
 
         return $template;
