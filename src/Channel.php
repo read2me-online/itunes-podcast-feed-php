@@ -88,7 +88,7 @@ class Channel implements ChannelInterface
             if ($propName == 'categories') {
                 $template = str_replace('{{categories}}', $this->getCategories(), $template);
             } else {
-                $template = str_replace(sprintf('{{%s}}', $propName), $propValue, $template);
+                $template = str_replace(sprintf('{{%s}}', $propName), (string)$propValue, $template);
             }
         }
 
